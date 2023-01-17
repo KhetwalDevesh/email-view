@@ -1,0 +1,148 @@
+.container{
+  padding:40px;
+  background-color: #F4F5F9;
+}
+
+.nav{
+  display: flex;
+  /* gap:40px; */
+  border-width: 1px;
+  font-size: large;
+  color: black;
+}
+
+.email-list{
+  height: full;
+  margin-top: 0px;
+}
+
+.emailData-container{
+  border: solid #CFD2DC;
+  background-color: white;
+  border-width: 1.8px;
+  border-radius:10px;
+  margin:25px;
+  margin-left:0;
+  margin-right:0;
+  padding:10px;
+  display: flex;
+  gap:20px;
+}
+
+.emailData-container1{
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  background-color: #E54065;
+  color:white;
+  justify-content: center;
+  display:flex;
+  align-items: center;
+  font-size: larger;
+  text-transform: uppercase;
+  margin-left:10px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.emailData-container2{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  color:#636363;
+  font-family: 'Varela Round', sans-serif;
+}
+
+ .emailData-container2 div:nth-child(2){
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+
+.emailData-container2 div:nth-child(3) {
+  padding-bottom: 10px;
+}
+
+body{
+  background-color: #F4F5F9;
+}
+a{
+  text-decoration: none;
+}
+
+span{
+  font-family: 'Varela Round', sans-serif;
+}
+
+.filter{
+  cursor: pointer;
+  padding: 2px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 15px;
+}
+
+.filter-by{
+  padding:2px;
+}
+
+.filter:hover{
+  background-color: #E1E4EA;
+  color:#636363;
+  border: solid #CFD2DC;
+  border-width: 1px; 
+
+}
+
+.email-body{
+display: none;
+border: 1px solid red;
+
+}
+
+.email-body-container1{
+  border-radius: 100%;
+  height: 50px;
+  width: 50px;
+  background-color: #E54065;
+  color:white;
+  justify-content: center;
+  display:flex;
+  align-items: center;
+  font-size: larger;
+  text-transform: uppercase;
+  margin-left:10px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.email-body-container2{
+  width: 100%;
+  color:#636363;
+  font-family: 'Varela Round', sans-serif;
+  /* justify-content: space-between; */
+}
+
+.emailBody-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.emailBody-subject{
+  font-size: 30px;
+}
+
+.fav{
+  border:none;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #E54065;
+  color:white;
+  justify-content: center;
+  display:flex;
+  align-items: center;
+  font-family: 'Varela Round', sans-serif;
+  cursor:pointer;
+}
+
+.email-listing-body{
+  
+}
