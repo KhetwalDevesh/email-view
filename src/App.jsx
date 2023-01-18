@@ -67,8 +67,16 @@ function App() {
 
         document.querySelector('.emailBody-date').innerText=currentEmail.date;
 
-        document.querySelector('.email-body').style.display='block';
+        document.querySelector('.email-body').style.display='flex';
+        document.querySelector('.email-body').style.padding='40px';
+        document.querySelector('.email-body').style.marginTop='25px';
+        document.querySelector('.email-body').style.gap='20px';
         document.querySelector('.email-listing-body').style.display='flex';
+        document.querySelector('.email-listing-body').style.gap='30px';
+        document.querySelector('.email-list').style.flex='40%';
+        document.querySelector('.email-body').style.flex='60%';
+
+        document.querySelector('.fav').addEventListener('click',()=>{currentEmail.is_favorite=true});
       }
     })
   }
@@ -102,7 +110,9 @@ function App() {
     getEmailList();
     console.log(JSON.stringify(emailList,null,2));
     // setTimeout(displayEmailBody,0);
-    
+  },[]);
+
+  useEffect(()=>{
     if(clickedId!="")
       displayEmailBody();
     else
@@ -130,11 +140,14 @@ function App() {
                     <div className='emailData-container1'>
                       {emailData.from.name[0]}
                     </div>
-                    <a  href="#" className='emailData-container2' onClick={()=>{setClickedId(`${emailData.id}`); return false;}}>
+                    <a  href="#" className='emailData-container2' onClick={()=>{setClickedId(`${emailData.id}`); emailData.is_read=true; return false;}}>
                       <div>From: <b>{emailData.from.name} {emailData.from.email}</b></div>
                       <div>Subject: <b>{emailData.subject}</b></div>
                       <div>{emailData.short_description}</div>
+                      <div className='dateAndFav'>
                       <div>{emailData.date}</div>
+                      <span onClick={()=>{emailData.is_favorite=true}} className='favInList'>Favorite</span>
+                      </div>
                     </a>
                   </div>
               )
@@ -149,11 +162,14 @@ function App() {
                       <div className='emailData-container1'>
                         {emailData.from.name[0]}
                       </div>
-                      <a href="" className='emailData-container2' onClick={()=>{setClickedId(emailData.id)}}>
+                      <a  href="#" className='emailData-container2' onClick={()=>{setClickedId(`${emailData.id}`); emailData.is_read=true; return false;}}>
                         <div>From: <b>{emailData.from.name} {emailData.from.email}</b></div>
                         <div>Subject: <b>{emailData.subject}</b></div>
                         <div>{emailData.short_description}</div>
-                        <div>{emailData.date}</div>
+                        <div className='dateAndFav'>
+                      <div>{emailData.date}</div>
+                      <span onClick={()=>{emailData.is_favorite=true}} className='favInList'>Favorite</span>
+                      </div>
                       </a>
                     </div>
                 )
@@ -169,11 +185,14 @@ function App() {
                       <div className='emailData-container1'>
                         {emailData.from.name[0]}
                       </div>
-                      <a href="" className='emailData-container2' onClick={()=>{setClickedId(emailData.id)}}>
+                      <a  href="#" className='emailData-container2' onClick={()=>{setClickedId(`${emailData.id}`); emailData.is_read=true; return false;}}>
                         <div>From: <b>{emailData.from.name} {emailData.from.email}</b></div>
                         <div>Subject: <b>{emailData.subject}</b></div>
                         <div>{emailData.short_description}</div>
-                        <div>{emailData.date}</div>
+                        <div className='dateAndFav'>
+                      <div>{emailData.date}</div>
+                      <span onClick={()=>{emailData.is_favorite=true}} className='favInList'>Favorite</span>
+                      </div>
                       </a>
                     </div>
                 )
@@ -189,11 +208,14 @@ function App() {
                       <div className='emailData-container1'>
                         {emailData.from.name[0]}
                       </div>
-                      <a href="" className='emailData-container2' onClick={()=>{setClickedId(emailData.id)}}>
+                      <a  href="#" className='emailData-container2' onClick={()=>{setClickedId(`${emailData.id}`); emailData.is_read=true; return false;}}>
                         <div>From: <b>{emailData.from.name} {emailData.from.email}</b></div>
                         <div>Subject: <b>{emailData.subject}</b></div>
                         <div>{emailData.short_description}</div>
-                        <div>{emailData.date}</div>
+                        <div className='dateAndFav'>
+                      <div>{emailData.date}</div>
+                      <span onClick={()=>{emailData.is_favorite=true}} className='favInList'>Favorite</span>
+                      </div>
                       </a>
                     </div>
                 )
@@ -210,7 +232,7 @@ function App() {
         <div className='email-body-container2'>
           <div className='emailBody-header'>
             <b><span className='emailBody-subject'></span></b>
-            <button className='fav'>Mark as favorite</button>
+            <button  className='fav'>Mark as favorite</button>
           </div>
 
           <div className='emailBody-date'></div>

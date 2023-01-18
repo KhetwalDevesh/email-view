@@ -94,8 +94,14 @@ span{
 
 .email-body{
 display: none;
-border: 1px solid red;
+border: 1px solid #CFD2DC;
+border-radius: 10px;
+background-color: white;
+}
 
+.emailBody-date{
+  padding-top:20px;
+  padding-bottom:20px;
 }
 
 .email-body-container1{
@@ -143,6 +149,11 @@ border: 1px solid red;
   cursor:pointer;
 }
 
-.email-listing-body{
-  
+.dateAndFav{
+  display: flex;
+  justify-content: space-between;
+}
+
+.favInList{
+  color:#E54065;
 }
