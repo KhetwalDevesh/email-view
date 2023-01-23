@@ -14,7 +14,7 @@
 .email-list{
   height: full;
   margin-top: 0px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 .emailData-container{
@@ -98,7 +98,7 @@ display: none;
 border: 1px solid #CFD2DC;
 border-radius: 10px;
 background-color: white;
-border: 1px solid red;
+/* border: 1px solid red; */
 }
 
 .emailBody-date{
@@ -164,10 +164,62 @@ border: 1px solid red;
   background-color: #F2F2F2;
 }
 
-@media(max-width:700px){
+.x-btn-cover{
+  display: none;
+}
+
+@media(max-width:1000px){
+  .email-body{
+    z-index:100;
+    display: block;
+    left: 0;
+    position:absolute;
+    height: 100%;
+    padding:10px !important;
+  }
+  .email-list{
+    z-index: 0;
+  }
   .email-listing-body{
+    /* display: block; */
+    position: relative;
+  }
+  .x-btn-cover{
+    /* display: block; */
     display: flex;
-    gap:5px;
-    background-color: blue;
+    justify-content: end;
+    align-items: flex-end;
+    padding-bottom:20px;
+    /* border-radius: 30px; */
+  }
+  .x-btn{
+    border-radius: 11px;
+    /* border: 1px solid; */
+    border:none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .email-body-disappear{
+    display: none !important;
+  }
+}
+
+@media(max-width:550px){
+  .nav{
+    font-size: small;
+  }
+  .fav{
+    padding:8px;
+    font-size: x-small;
+  }
+  .emailBody-subject{
+    font-size: medium;
+  }
+  #email-description{
+    font-size:small;
+  }
+  .filter{
+    padding-left:8px;
+    padding-right:8px;
   }
 }
